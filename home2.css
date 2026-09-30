@@ -47,24 +47,46 @@ h1{
     background-image: url(imagenes/descarga.jpg);
  }
 
- button{
-    font-size: 30px;
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: none;
-    background-color: #73B6DA;
-    color: black;
-    cursor: pointer;
-    transition: .3s ease;
- }
+/* ===== BOTONES ===== */
 
-button:hover{
-    background-color: #73B6DA(208 ,0 ,0);
-    transform: translateY(-4px);
+button,
+.btn {
+font-size: 18px;
+padding: 12px 28px;
+border-radius: 12px;
+border: 2px solid var(--verde);
+background: white;
+color: var(--verde-oscuro) !important;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.3s ease;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
 }
 
-.btn{
-    background-color: #6BE0A4;
+button:hover,
+.btn:hover {
+background: linear-gradient(135deg, var(--verde), var(--azul));
+color: white !important;
+border-color: transparent;
+transform: translateY(-3px);
+box-shadow: 0 8px 18px rgba(107, 224, 164, 0.35);
+}
+
+/* ===== BOTON ESTILO 2 ===== */
+
+.btn-estilo2 {
+background: linear-gradient(135deg, var(--verde), var(--azul));
+width: 59%;
+height: 75%;
+color: white !important;
+border: none;
+}
+
+.btn-estilo2:hover {
+background: linear-gradient(135deg, var(--azul), var(--verde-oscuro));
+color: white !important;
+transform: translateY(-4px);
+box-shadow: 0 10px 22px rgba(115, 182, 218, 0.35);
 }
 
 .imagen-banner {
