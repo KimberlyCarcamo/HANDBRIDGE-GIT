@@ -1,0 +1,274 @@
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.card-simple{
+    box-shadow: none;
+}
+
+
+
+.logo-dinero {
+  width: 230px;
+  height: auto;
+  margin: 1rem auto;
+  display: block;
+  filter: grayscale(100%); 
+  transition: transform 0.3s ease;
+}
+
+.logo-dinero:hover {
+  transform: scale(1.1);
+}
+
+.logo-tiempo{
+     width: 190px;
+  height: auto;
+  margin: 1rem auto;
+  display: block;
+  filter: grayscale(100%); 
+  transition: transform 0.3s ease;
+}
+
+.logo-tiempo:hover {
+  transform: scale(1.1);
+}
+
+
+.text-go{
+  color:  #27adb4 ;
+  text-align: center;
+}
+
+
+.img {
+  display: block;
+  margin: 0 auto;
+  max-width: 190px;
+  height: auto;
+  animation: fadeIn 1.5s ease-in-out;
+
+  
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.img:hover {
+  transform: scale(1.06); 
+}
+
+
+
+
+.btn1,
+.btn2,
+.btn3,
+.btn4,
+.btn5,
+.btn-6 {
+  border-radius: 30px;
+  width: 100%;
+  background-color: #6BE0A4;
+  border: 2px solid rgb(105, 255, 162);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  padding: 12px;
+  font-size: 1.1rem;
+  animation: popIn 0.8s ease-in-out;
+}
+
+.btn8{
+  border-radius: 30px;
+  width: 40%;
+  background-color: #6BE0A4;
+  border: 2px solid rgb(105, 255, 162);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  padding: 12px;
+  font-size: 1.1rem;
+  animation: popIn 0.8s ease-in-out;
+  margin-left: 30%;
+  height: 60px;
+
+}
+
+.btn8:hover {
+  transform: scale(1.05);
+  background-color: #54d98a;
+}
+
+.btn-6 {
+  height: 97px;
+  background-color: #82ecd1;
+  
+}
+
+.btn5 {
+  margin-bottom: 12%;
+}
+
+.btn1:hover,
+.btn2:hover,
+.btn3:hover,
+.btn4:hover,
+.btn5:hover,
+.btn-6:hover
+.btn8:hover {
+  transform: scale(1.05);
+  background-color: #54d98a;
+}
+
+@media (max-width: 768px) {
+  .img {
+    max-width: 60%;
+    margin-bottom: 20px;
+  }
+
+  .btn1,
+  .btn2,
+  .btn3,
+  .btn4,
+  .btn5,
+  .btn-6
+  .btn8 {
+    font-size: 1rem;
+    padding: 15px;
+    margin-bottom: 15px;
+    width: 60%;
+  }
+
+  .btn-6 {
+    height: auto;
+    width: 80%;
+
+  }
+
+  .input-dinero{
+    width: 30%;
+  }
+ 
+}
+
+.nono,
+.du,
+.emil,
+.num,
+.pag {
+ width: 400px;
+ height: 46px;
+ background-color: white;
+ border: 2px solid #6BE0A4;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+.nono:focus,
+.du:focus,
+.emil:focus,
+.num:focus,
+.pag:focus{
+  outline: none;
+  border-color: #28a745;
+  box-shadow: 0 0 8px rgba(40, 167, 69, 0.3);
+}
+
+
+
+.input-dinero {
+  background-color: white;
+  border: 2px solid #6BE0A4;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  width: 50%;
+  height: 60px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.input-dinero:focus {
+  outline: none;
+  border-color: #28a745;
+  box-shadow: 0 0 8px rgba(40, 167, 69, 0.3);
+}
+
+
+
+
+.navbar {
+    background-color: #fff;
+    border-bottom: 2px solid #eee;
+    padding: 10px 20px;
+}
+
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin-right: 10px;
+    margin-bottom: 0%;
+    margin-top: 0%;
+}
+
+
+.brand-text {
+    font-size: 22px;
+    font-weight: bold;
+    color: #6BE0A4; 
+    text-transform: uppercase;
+}
+
+
+.navbar-nav .nav-link {
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 8px;
+    transition: 0.3s;
+    border-radius: 6px;
+    padding: 8px 12px;
+}
+
+
+.navbar-nav .nav-link:hover {
+    background-color:  #6BE0A4; 
+    color: #fff;
+}
+
+
+.navbar-nav .nav-link.active {
+    color: #6BE0A4;
+    font-weight: bold;
+}

@@ -1,0 +1,28 @@
+.nav,
+.navbar {
+  background-color: #6BE0A4;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.navbar {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+
+.navbar-brand {
+  font-size: 1.1rem;
+  padding-left: 0.5rem;
+  animation: slideInUp 1s ease forwards;
+}
+
+.nav-link {
+  padding: 0.25rem 0.8rem;
+  transition: color 0.3s ease;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #2e7d32;
+}
+
+

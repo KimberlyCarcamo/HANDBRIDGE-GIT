@@ -1,0 +1,131 @@
+.navbar {
+    background-color: #fff;
+    border-bottom: 2px solid #eee;
+    padding: 10px 20px;
+}
+
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin-right: 10px;
+    margin-bottom: 0%;
+    margin-top: 0%;
+}
+
+
+.brand-text {
+    font-size: 22px;
+    font-weight: bold;
+    color: #6BE0A4; 
+    text-transform: uppercase;
+}
+
+
+.navbar-nav .nav-link {
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 8px;
+    transition: 0.3s;
+    border-radius: 6px;
+    padding: 8px 12px;
+}
+
+
+.navbar-nav .nav-link:hover {
+    background-color:  #6BE0A4; 
+    color: #fff;
+}
+
+
+.navbar-nav .nav-link.active {
+    color: #6BE0A4;
+    font-weight: bold;
+}
+
+
+
+* {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 40px auto;
+    gap: 30px;
+    padding: 0 20px;
+  }
+  /* Tarjeta requisitos */
+  .card {
+    flex: 1 1 350px;
+    background-color: #4a90e2; /* Cambia este color a tu gusto */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    padding: 25px 30px;
+    color: white;
+    min-width: 300px;
+  }
+  .card h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+  .card ul {
+    padding-left: 20px;
+    line-height: 1.6;
+  }
+  .card ul li {
+    margin-bottom: 10px;
+  }
+
+  /* Sección motivacional */
+  .motivation {
+    flex: 1 1 350px;
+    min-width: 300px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .motivation p {
+    font-size: 1.15rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    color: #222;
+  }
+  .motivation a {
+    text-decoration: none;
+    background-color: #4a90e2; 
+    color: white;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    width: fit-content;
+    transition: background-color 0.3s ease;
+  }
+  .motivation a:hover {
+    background-color: #357ABD;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+    .card, .motivation {
+      min-width: 100%;
+    }
+  }
