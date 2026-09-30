@@ -1,131 +1,663 @@
-.navbar {
-    background-color: #fff;
-    border-bottom: 2px solid #eee;
-    padding: 10px 20px;
-}
 
-
-.logo {
-    width: 150px;
-    height: auto;
-    margin-right: 10px;
-    margin-bottom: 0%;
-    margin-top: 0%;
-}
-
-
-.brand-text {
-    font-size: 22px;
-    font-weight: bold;
-    color: #6BE0A4; 
-    text-transform: uppercase;
-}
-
-
-.navbar-nav .nav-link {
-    color: #333;
-    font-size: 18px;
-    font-weight: 500;
-    margin: 0 8px;
-    transition: 0.3s;
-    border-radius: 6px;
-    padding: 8px 12px;
-}
-
-
-.navbar-nav .nav-link:hover {
-    background-color:  #6BE0A4; 
-    color: #fff;
-}
-
-
-.navbar-nav .nav-link.active {
-    color: #6BE0A4;
-    font-weight: bold;
-}
-
-
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
 
 * {
     box-sizing: border-box;
-  }
-  body {
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     margin: 0;
+
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f5f7fa;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5faf7,
+            #eef8f3
+        );
+
     color: #333;
-  }
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1100px;
-    margin: 40px auto;
-    gap: 30px;
-    padding: 0 20px;
-  }
-  /* Tarjeta requisitos */
-  .card {
-    flex: 1 1 350px;
-    background-color: #4a90e2; /* Cambia este color a tu gusto */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    border-radius: 12px;
-    padding: 25px 30px;
-    color: white;
-    min-width: 300px;
-  }
-  .card h2 {
+
+    animation: aparecer 0.8s ease;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border-bottom: 2px solid #e8f1ec;
+
+    padding: 10px 20px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.06);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    transition:
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.navbar:hover {
+
+    box-shadow:
+        0 7px 25px rgba(0, 0, 0, 0.09);
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+
+    width: 150px;
+
+    height: auto;
+
+    margin-right: 10px;
+
+    margin-bottom: 0;
+
     margin-top: 0;
-    margin-bottom: 15px;
-    font-weight: 700;
-    font-size: 1.8rem;
-    letter-spacing: 1px;
-  }
-  .card ul {
-    padding-left: 20px;
-    line-height: 1.6;
-  }
-  .card ul li {
-    margin-bottom: 10px;
-  }
 
-  /* Sección motivacional */
-  .motivation {
-    flex: 1 1 350px;
-    min-width: 300px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    padding: 30px;
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+
+.logo:hover {
+
+    transform: scale(1.05);
+
+    filter:
+        drop-shadow(
+            0 5px 8px rgba(107, 224, 164, 0.25)
+        );
+}
+
+
+/* =========================================
+   TEXTO DE MARCA
+========================================= */
+
+.brand-text {
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    color: #55b982;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.brand-text:hover {
+
+    color: #3d9d69;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   LINKS DEL NAVBAR
+========================================= */
+
+.navbar-nav .nav-link {
+
+    color: #3f4a44;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    margin: 0 8px;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+    border-radius: 10px;
+
+    padding: 8px 12px;
+
+    position: relative;
+}
+
+
+/* Línea animada debajo del link */
+
+.navbar-nav .nav-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+
+    height: 3px;
+
+    left: 50%;
+
+    bottom: 3px;
+
+    background: #6BE0A4;
+
+    border-radius: 10px;
+
+    transition:
+        width 0.3s ease,
+        left 0.3s ease;
+}
+
+
+/* Hover */
+
+.navbar-nav .nav-link:hover {
+
+    background-color: #6BE0A4;
+
+    color: #fff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 12px rgba(107, 224, 164, 0.22);
+}
+
+
+.navbar-nav .nav-link:hover::after {
+
+    width: 0;
+}
+
+
+/* Link activo */
+
+.navbar-nav .nav-link.active {
+
+    color: #4caf7d;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
+
+.container {
+
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .motivation p {
-    font-size: 1.15rem;
-    line-height: 1.5;
-    margin-bottom: 25px;
-    color: #222;
-  }
-  .motivation a {
-    text-decoration: none;
-    background-color: #4a90e2; 
-    color: white;
-    padding: 12px 22px;
-    border-radius: 8px;
-    font-weight: 600;
-    width: fit-content;
-    transition: background-color 0.3s ease;
-  }
-  .motivation a:hover {
-    background-color: #357ABD;
-  }
 
-  /* Responsive */
-  @media (max-width: 768px) {
+    flex-wrap: wrap;
+
+    max-width: 1100px;
+
+    margin: 55px auto;
+
+    gap: 30px;
+
+    padding: 0 20px;
+
+    animation:
+        aparecerContenido 0.9s ease;
+}
+
+
+/* =========================================
+   TARJETA DE REQUISITOS
+========================================= */
+
+.card {
+
+    flex: 1 1 350px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #55bd83,
+            #6BE0A4
+        );
+
+    box-shadow:
+        0 10px 25px rgba(71, 145, 101, 0.20);
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    color: white;
+
+    min-width: 300px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* Decoración */
+
+.card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.12);
+
+    top: -90px;
+
+    right: -60px;
+}
+
+
+.card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+
+    height: 100px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    bottom: -50px;
+
+    left: -30px;
+}
+
+
+/* Elevación */
+
+.card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 18px 35px rgba(71, 145, 101, 0.25);
+}
+
+
+/* Título */
+
+.card h2 {
+
+    margin-top: 0;
+
+    margin-bottom: 15px;
+
+    font-weight: 700;
+
+    font-size: 1.8rem;
+
+    letter-spacing: 1px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* Lista */
+
+.card ul {
+
+    padding-left: 20px;
+
+    line-height: 1.7;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+.card ul li {
+
+    margin-bottom: 10px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+.card ul li:hover {
+
+    transform:
+        translateX(5px);
+}
+
+
+/* =========================================
+   SECCIÓN MOTIVACIONAL
+========================================= */
+
+.motivation {
+
+    flex: 1 1 350px;
+
+    min-width: 300px;
+
+    background:
+        rgba(255,255,255,0.92);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.08);
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    border: 1px solid #edf3ef;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* Brillo decorativo */
+
+.motivation::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+
+    height: 150px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(107, 224, 164, 0.10);
+
+    top: -70px;
+
+    right: -60px;
+}
+
+
+.motivation:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 17px 35px rgba(0,0,0,0.11);
+}
+
+
+/* Texto */
+
+.motivation p {
+
+    font-size: 1.15rem;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+
+    color: #3f4a44;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   BOTÓN
+========================================= */
+
+.motivation a {
+
+    text-decoration: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #55bd83,
+            #6BE0A4
+        );
+
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: 12px;
+
+    font-weight: 600;
+
+    width: fit-content;
+
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 7px 15px rgba(85, 189, 131, 0.22);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        filter 0.25s ease;
+}
+
+
+/* Brillo */
+
+.motivation a::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 60%;
+
+    height: 100%;
+
+    left: -100%;
+
+    top: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.45),
+            transparent
+        );
+
+    transform:
+        skewX(-20deg);
+
+    transition:
+        left 0.6s ease;
+}
+
+
+/* Hover botón */
+
+.motivation a:hover {
+
+    color: white;
+
+    transform:
+        translateY(-4px)
+        scale(1.03);
+
+    box-shadow:
+        0 11px 22px rgba(85, 189, 131, 0.30);
+
+    filter:
+        brightness(1.05);
+}
+
+
+.motivation a:hover::before {
+
+    left: 130%;
+}
+
+
+/* =========================================
+   ANIMACIONES
+========================================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes aparecerContenido {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
     .container {
-      flex-direction: column;
+
+        flex-direction: column;
+
+        margin-top: 35px;
     }
-    .card, .motivation {
-      min-width: 100%;
+
+
+    .card,
+    .motivation {
+
+        min-width: 100%;
     }
-  }
+
+
+    .navbar-nav .nav-link {
+
+        margin: 4px 0;
+
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .container {
+
+        padding: 0 15px;
+
+        margin-top: 25px;
+    }
+
+
+    .card,
+    .motivation {
+
+        padding: 23px;
+
+        border-radius: 17px;
+    }
+
+
+    .card h2 {
+
+        font-size: 1.5rem;
+    }
+
+
+    .motivation p {
+
+        font-size: 1rem;
+    }
+
+}
