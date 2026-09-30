@@ -64,17 +64,21 @@ header a:hover {
 }
 
 .card.horizontal img {
-  width: 30%;
-  height: 260px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.3s ease;
-  margin-top: 4%;
+width: 30%;
+height: 260px;
+object-fit: cover;
+display: block;
+transition: all 0.3s ease;
+margin-top: 4%;
+border-radius: 8px;
+box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
 }
 
 .card.horizontal img:hover {
-  transform: scale(1.05);
+transform: scale(1.05) translateY(-3px);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
 }
+
 .card-content {
   padding: 20px;
   display: flex;
